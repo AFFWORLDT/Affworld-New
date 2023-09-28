@@ -14,7 +14,7 @@ export const afterLoginStorage = async (
         const url = `${URL}/api/affiliates`;
         try {
           const userData = JSON.parse(user);
-          const accessToken = userData.data.access_token;
+          const accessToken = userData?.data.access_token;
           const res = await axios.get(url, {
             headers: {
               'Content-Type': 'application/json',
